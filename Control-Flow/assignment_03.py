@@ -13,7 +13,17 @@ sequence([]) → False
 
 # Your Code Below:
 
+def sequence(ints):
+    for i in range(len(ints) - 2):
+        if ints[i] == 1 and ints[i+1] == 2 and ints[i+2] == 3:
+            return True
+    return False
 
+print(sequence([1, 1, 2, 3, 1]))
+print(sequence([1, 1, 2, 4, 1]))
+print(sequence([1, 1, 2, 1, 2, 3]))
+print(sequence([1, 2]))
+print(sequence([]))
 
 
 
