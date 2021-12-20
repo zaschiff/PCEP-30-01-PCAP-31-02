@@ -17,19 +17,17 @@ sum78([1, 1, 7, 8, 2]) → 4
 #Your Code Below:
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+def sum78(nums):
+    ignore = False
+    count = 0
+    for i in range(len(nums)):
+        if nums[i] == 7:
+            ignore = True
+        elif nums[i] == 8:
+            ignore = False
+        elif not ignore:
+            count =  count + nums[i]
+    return count
 
 
 print(sum78([1, 2, 2])) #→ 5

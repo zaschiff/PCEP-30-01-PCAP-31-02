@@ -40,19 +40,29 @@ d= {
 # --------------------------------------
 
 
-
+def email_search(l, dict):
+    for i in range(len(l)):
+        breakdown = l[i].split("|")
+        email = breakdown[0]
+        new_num = int(max(dict.values()))
+        #print(breakdown)
+        if email in dict:
+           breakdown[0] = dict[email]
+        else:
+            breakdown[0] = str(new_num + 1)
+            dict[email] = str(new_num + 1)
+        # print(max(dict.values()))
+        l[i] = "|".join(breakdown)
 
 
 
 # don't change the lines below:
 # --------------------------------------
+email_search(fr, d)
 print("Value of fr: ")
 print(fr)
 print("Value of d:")
 print(d)
-
-
-
 
 
 
